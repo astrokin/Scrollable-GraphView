@@ -253,9 +253,9 @@ class ViewController: UIViewController {
     private func generateRandomData(numberOfItems: Int, max: Double) -> [Double] {
         var data = [Double]()
         for _ in 0 ..< numberOfItems {
-            var randomNumber = Double(random()) % max
+            var randomNumber = Double(arc4random()) % max
             
-            if(random() % 100 < 10) {
+            if(arc4random() % 100 < 10) {
                 randomNumber *= 3
             }
             
